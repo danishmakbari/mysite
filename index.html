@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<script src="libs/gl-matrix/dist/gl-matrix-min.js"></script>
+	<script src ="scripts/shaders.js"></script>
+	<script src ="scripts/matrixops.js"></script>
+	<script src="scripts/draw.js"></script>
+	<script src="scripts/animation.js"></script>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Портфолио</title>
+	</head>
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<body>
+
+		<header>
+			<div class="myname"><a href="#animtext">Макбари Даниш Александрович</a></div>
+
+				<div class="menu">
+					<ul>
+						<li><a href="#me">Обо мне</a></li>
+						<li><a href="#works">Работы</a></li>
+						<li><a href="#contacts">Контакты</a></li>
+					</ul>
+				</div>
+		</header>
+
+		<div id="animtext" class="animtext">Привет! Меня зовут Даниш. Я учусь в МТУСИ.</div>
+
+		<div class="head" id="me">Обо мне</div>
+		<div class="text">Я yмею работать с HTML, CSS, JavaScript, Java, C/C++.</div>
+		<div class="head" id="works">Работы</div>
+
+		<table class="t3d">
+			<tr>
+				<td><canvas id="gouraudcube" width="200" height="200"></canvas></td>
+				<td><canvas id="gouraudsphere" width="200" height="200"></canvas></td>
+				<td><canvas id="phongcube" width="200" height="200"></canvas></td>
+				<td><canvas id="phongsphere" width="200" height="200"></canvas></td>
+			</tr>
+		</table>
+
+		<table class="tsettings">
+			<tr>
+				<td><p>Уровень тесселяции сферы:</p></td>
+				<td><input id="teschoice"  type="range" min="0" max="6" step="1" value="3"></td>
+			</tr>
+
+			<tr>
+				<td><p>Позиция источника света(x, y, z):</p></td>
+				<td><input id="Cx" type="range" min="-15" max="15" step="1" value="10"></td>
+				<td><input id="Cy" type="range" min="-15" max="15" step="1" value="10"></td>
+				<td><input id="Cz" type="range" min="5" max="15" step="1" value="15"></td>
+			</tr>
+
+			<tr>
+				<td><p>Фоновая составляющая материала(r, g, b):</p></td>
+				<td><input id="Ar" type="range" min="0" max="1" step="0.1" value="0.3"></td>
+				<td><input id="Ag" type="range" min="0" max="1" step="0.1" value="0"></td>
+				<td><input id="Ab" type="range" min="0" max="1" step="0.1" value="0"></td>
+			</tr>
+
+			<tr>
+				<td><p>Диффузная составляющая материала(r, g, b):</p></td>
+				<td><input id="Dr" type="range" min="0" max="1" step="0.1" value="0.3"></td>
+				<td><input id="Dg" type="range" min="0" max="1" step="0.1" value="0"></td>
+				<td><input id="Db" type="range" min="0" max="1" step="0.1" value="0"></td>
+			</tr>
+			<tr>
+				<td><p>Зеркальная составляющая материала(r, g, b):</p></td>
+				<td><input id="Sr" type="range" min="0" max="1" step="0.1" value="0.6"></td>
+				<td><input id="Sg" type="range" min="0" max="1" step="0.1" value="0.7"></td>
+				<td><input id="Sb" type="range" min="0" max="1" step="0.1" value="0.7"></td>
+			</tr>
+
+
+			<tr>
+				<td><p>Коэффициент блeска:</p></td>
+				<td><p><input id="shininess" type="range" min="4" max="256" step="1" value="16"></p></td>
+			</tr>
+		</table>
+
+		<div class="text">Работа 1. Пример моей работы с HTML, CSS и JavaScript(WebGL2 и GLSL)</div>
+		<div class="text"></div>
+
+		<img class="center" src="images/clexample.png" width="768" height="432">
+		<div class="text">Работа 2. Пример моей работы с Си и OpenCL. Визуализация множества Мандельброта.</div>
+		<div class="text"></div>
+
+		<img class="center" src="images/desert.png" width="973" height="541">
+		<div class="text">Работа 3. Пример моей работы с Си, OpenGL4 и GLSL. Пустыня.</div>
+
+		<div class="head" id="contacts">Контакты</div>
+		<div class="text">Моя почта: <b>danish.m@mail.ru</b></div>
+		<div class="text">Мой номер: <b>8 (985) 906 38 64</b></div>
+		<div class="text">Мой телеграм: <b>t.me/danishmakbari</b></div>
+
+
+		<footer>
+			<div class="footertext">2021</div>
+		</footer>
+
+	</body>
+</html>
+
